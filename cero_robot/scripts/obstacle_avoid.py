@@ -71,19 +71,12 @@ class AvoidObstacleClass():
     def laser_cb(self, msg):  
 
         ## This function receives a message of type LaserScan and computes the closest object direction and range 
-
         closest_range = min(msg.ranges) 
-
         idx = msg.ranges.index(closest_range) 
-
         closest_angle = msg.angle_min + idx * msg.angle_increment 
-
         # Limit the angle to [-pi,pi] 
-
         closest_angle = np.arctan2(np.sin(closest_angle),np.cos(closest_angle)) 
-
         self.closest_range = closest_range 
-
         self.closest_angle = closest_angle 
 
  
@@ -93,9 +86,7 @@ class AvoidObstacleClass():
     def cleanup(self):  
 
         #This function is called just before finishing the node  
-
         # You can use it to clean things up before leaving  
-
         # Example: stop the robot before finishing a node.    
 
         vel_msg = Twist() 
