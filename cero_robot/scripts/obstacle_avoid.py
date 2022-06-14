@@ -29,8 +29,8 @@ class AvoidObstacleClass():
         print("Node initialized 1hz") 
 	v_desired = 0.3
 	kw = 0.3
-	safety_range = 0.75
-	proximity_zone = 2
+	safety_range = 0.45
+	proximity_zone = 1
 
         ############################### MAIN LOOP ##################################### 
 
